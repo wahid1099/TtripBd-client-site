@@ -19,7 +19,7 @@ const PlaceOrder = () => {
     const [placeorder,setplaceOrder]=useState();
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/trips/${tripid}`)
+        fetch(`https://desolate-thicket-49605.herokuapp.com/trips/${tripid}`)
             .then(res=>res.json())
             .then(data=>setplaceOrder(data));
     },[])
@@ -39,7 +39,7 @@ const PlaceOrder = () => {
         const booktrip={username,email,city,adress,phone,_id,name,img,price};
 
 
-        fetch('http://localhost:5000/booktrip', {
+        fetch('https://desolate-thicket-49605.herokuapp.com/booktrip', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
