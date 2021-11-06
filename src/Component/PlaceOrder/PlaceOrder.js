@@ -45,12 +45,13 @@ const PlaceOrder = () => {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(booktrip)
+
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 if (data.insertedId) {
-                    alert('Successfully trip Booked.')
-                    console.log(booktrip);
+                    alert('Successfully Trip Booked.')
                     e.target.reset();
                 }
             })
