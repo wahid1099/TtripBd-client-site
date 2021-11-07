@@ -115,14 +115,14 @@ const UseFirebase = () => {
     }
 
     //log in with google
-    const singInwithGoogle=()=>{
+    const singInwithGoogle=(location,history)=>{
         const googleProvider = new GoogleAuthProvider();
         signInWithPopup(auth,googleProvider)
             .then(result=>{
                 setUser(result.user)
-
-                setLocation(true);
-                console.log(result)
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+                
             })
             .finally(() => setIsLoading(false));
 
@@ -131,14 +131,15 @@ const UseFirebase = () => {
     }
     //log in with github
 
-    const singInWithGithub=()=>{
+    const singInWithGithub=(location,history)=>{
         const githubProvider=new GithubAuthProvider();
+        setIsLoading(true);
         signInWithPopup(auth,githubProvider)
             .then(result=>{
                 setUser(result.user)
-
-                setLocation(true);
-                console.log(result)
+                const destination = location?.state?.from || '/';
+                history.replace(destination);
+               
             })
             .finally(() => setIsLoading(false));
     }

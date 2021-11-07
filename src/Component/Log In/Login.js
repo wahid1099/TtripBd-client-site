@@ -7,7 +7,7 @@ const Login = () => {
     //const{singInwithGoogle,singInWithGithub,error, processLogin,setEmail,setPasword,handLogin}=UseAuth();
     const location = useLocation();
     const history = useHistory();
-    const redirect_uri = location.state?.from || '/shop';
+    
 
 
 
@@ -22,7 +22,9 @@ const Login = () => {
         redicretlocation,setLocation
     } = UseAuth();
 
-
+    const handleGoogleSignIn=()=>{
+        singInwithGoogle(location,history);
+    }
     return (
         <div className="login mx-auto text-center">
             <div className="container mx-auto mt-5 pt-4" >
@@ -54,7 +56,7 @@ const Login = () => {
                 </div>
                 <p>{error}</p>
                 <div>
-                    <Button variant="danger" className="w-25" onClick={singInwithGoogle}><BsGoogle/>Google</Button>
+                    <Button variant="danger" className="w-25" onClick={handleGoogleSignIn}><BsGoogle/>Google</Button>
                     <Button variant="secondary" className="w-25 m-4" onClick={singInWithGithub}><BsGithub/> Github</Button></div>
             </div>
         </div>
