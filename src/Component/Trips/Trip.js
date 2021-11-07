@@ -12,7 +12,7 @@ const Trip = (props) => {
                     <Card.Body>
                         <Card.Title>{name}</Card.Title>
                         <Card.Text className="text-start text-black-50">
-                            {description.slice(0,200)}
+                            {description}
                             <br/>
                            <a> Read More.....</a>
 
