@@ -6,10 +6,10 @@ const About = () => {
     return (
         <div >
             <Row className="mt-5">
-                <Col lg={6} md={6} sm={12}>
+                <Col lg={6} md={6} sm={12} data-aos="fade-right">
                     <img src={aboutbg} className="img-fluid"/>
                 </Col>
-                <Col lg={6} md={6} sm={12} className="mt-5">
+                <Col lg={6} md={6} sm={12} className="mt-5" data-aos="fade-left">
                     <h3>We Share Something</h3>
                     <h6>About us</h6>
                     <h5>THE MATE WAS A MIGHTY SAILIN MAN THE SKIPPER BRAVE AND SURE. FIVE PASSEGERS SET SAIL.

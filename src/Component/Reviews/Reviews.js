@@ -8,7 +8,7 @@ import { FaStar,FaStarHalfAlt } from "react-icons/fa";
 
 const Reviews = () => {
     return (
-        <div className="container mt-5">
+        <div className="container mt-5" data-aos="zoom-in">
             <h2 className="text-center">Happy Clients Says</h2>
             <Row xs={1} md={3} lg={3} className="g-4">
 

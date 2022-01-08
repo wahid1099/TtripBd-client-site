@@ -5,7 +5,7 @@ import './slider.css';
 import sylet from '../../images/sylet.jpg';
 const Slider = () => {
     return (
-        <div className="pt-5">
+        <div className="pt-5" data-aos="zoom-in">
             <Carousel>
                 <Carousel.Item>
                     <img

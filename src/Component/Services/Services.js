@@ -4,7 +4,7 @@ import { FaGlobeAmericas ,FaTaxi,FaWineGlassAlt,FaLifeRing,FaLeaf,FaEye} from "r
 import './service.css';
 const Services = () => {
     return (
-        <div className="text-center container">
+        <div className="text-center container" data-aos="zoom-in">
             <h2>Our Services</h2>
             <p>Great. Safe. Free.</p>
 

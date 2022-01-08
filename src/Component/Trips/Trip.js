@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 const Trip = (props) => {
     const{name,price,description,img,_id,days}=props.trip || {};
     return (
-        <div>
+        <div data-aos="zoom-in">
             <Col>
                 <Card className="border-1">
                     <Card.Img variant="top" src={img} className="img-fluid "/>
